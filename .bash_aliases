@@ -1,6 +1,6 @@
 alias vi=vim
 alias sbrc="source ~/.bashrc"
-alias spotify="spotify --force-device-scale-factor=1.5"
+alias spotify="/usr/bin/spotify --force-device-scale-factor=1.5"
 alias ros="source /opt/ros/kinetic/setup.bash"
 alias edit-alias="vi ~/.dotfiles/.bash_aliases"
 #ml() {
@@ -10,4 +10,8 @@ alias edit-alias="vi ~/.dotfiles/.bash_aliases"
 #	export PYENV_VERSION="ml"
 #	jupyter notebook --notebook-dir="~/dev"  
 #}
-alias unset-pyenv="pyenv shell --unset"
+alias unpyenv="pyenv shell --unset"
+alias reset-network="sudo service network-manager restart"
+
+alias workon_robot_1="export ROS_MASTER_URI=http://192.168.1.25:11311"
+

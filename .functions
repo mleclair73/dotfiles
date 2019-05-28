@@ -1,0 +1,16 @@
+# vim:syntax=sh
+clipboard() {
+	if command -v xclip 1>/dev/null; then
+	    if [[ -p /dev/stdin ]] ; then
+		# stdin is a pipe
+		# stdin -> clipboard
+		xclip -i -selection clipboard
+	    else
+		# stdin is not a pipe
+		# clipboard -> stdout
+		xclip -o -selection clipboard
+	    fi
+	else
+	    echo "Remember to install xclip"
+	fi
+}
